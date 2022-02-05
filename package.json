@@ -3,7 +3,7 @@
   "displayName": "CamelCase Refactor",
   "description": "Refactor css classes and styles imports",
   "publisher": "AndresCalvo",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.64.0"
   },
