@@ -22,7 +22,9 @@ export function activate(context: vscode.ExtensionContext) {
   const CLASSNAME_RegExp = new RegExp(
     /(?<=(styles\.))([_a-zA-Z]+[_a-zA-Z0-9-]*)/g
   );
-
+    const isCamelCase = (string:string)=>{
+      return /^[a-z][A-Za-z]+\d*$/.test(string)
+    }
   const refactor = async (type: "CSS" | "REACT") => {
     const wrksFolders = vscode.workspace.workspaceFolders;
 
@@ -38,6 +40,7 @@ export function activate(context: vscode.ExtensionContext) {
       const { fullPath } = entry;
       const fileData = await fs.promises.readFile(fullPath, "utf-8");
       const newFile = fileData.replace(regexp, (match) => {
+        if(isCamelCase(match)) return match
         const string = match.toLocaleLowerCase();
         return camelCase(string);
       });
