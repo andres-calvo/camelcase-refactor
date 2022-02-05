@@ -2,7 +2,7 @@
   "name": "camelcase-refactor",
   "displayName": "CamelCase Refactor",
   "description": "Refactor css classes and styles imports",
-  "publisher": "Andrés Calvo",
+  "publisher": "AndresCalvo",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.64.0"
