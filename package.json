@@ -2,6 +2,7 @@
   "name": "camelcase-refactor",
   "displayName": "CamelCase Refactor",
   "description": "Refactor css classes and styles imports",
+  "publisher": "Andrés Calvo",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.64.0"
@@ -10,14 +11,19 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:camelcase-refactor.helloWorld"
+    "onCommand:camelcase-refactor.camelCaseCSS",
+    "onCommand:camelcase-refactor.camelCaseJSX|TSX"
   ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "camelcase-refactor.helloWorld",
-        "title": "Hello World"
+        "command": "camelcase-refactor.camelCaseCSS",
+        "title": "camelCase: Classes"
+      },
+      {
+        "command": "camelcase-refactor.camelCaseJSX|TSX",
+        "title": "camelCase: JSX|TSX classNames"
       }
     ]
   },
@@ -49,6 +55,7 @@
     "webpack-cli": "^4.9.1"
   },
   "dependencies": {
+    "lodash": "^4.17.21",
     "readdirp": "^3.6.0"
   }
 }
