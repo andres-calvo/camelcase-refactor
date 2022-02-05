@@ -1,6 +1,11 @@
-# camelcase-refactor README
+# camelcase-refactor
 
-Refactor all your css classes to camelCase, this extension will read following types of files *.module.scss , *.module.sass , *.module.css , *.jsx , *.tsx
+Refactor all your css classes to camelCase, this extension will read following types of files *.module.scss , *.module.sass , *.module.css , *.jsx , *.tsx  
+
+#### CSS classes RegExp  
+**(?<=(\.))([_a-zA-Z]+[_a-zA-Z0-9-]*)**  
+#### JSX | TSX classNames RegExp  
+**(?<=(styles\.))([_a-zA-Z]+[_a-zA-Z0-9-]*)**
 
 ## Features
 
